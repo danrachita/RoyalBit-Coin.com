@@ -1,0 +1,26 @@
+[Unit]
+Description=ROBI's distributed currency daemon
+After=network.target
+
+[Service]
+User=robi
+Group=robi
+
+Type=forking
+PIDFile=/var/lib/robid/robid.pid
+
+ExecStart=/usr/bin/robid -daemon -pid=/var/lib/robid/robid.pid \
+          -conf=/etc/robi/robi.conf -datadir=/var/lib/robid
+
+ExecStop=-/usr/bin/robi-cli -conf=/etc/robi/robi.conf \
+         -datadir=/var/lib/robid stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
