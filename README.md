@@ -50,4 +50,4 @@ _Proof of Stake will automatically be enabled at block 200 001_
 
 # Further information
 
-For further information visit us at [royalbit-coin.com](http://royalbit-coin.com/) or visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=3275513)
+For further information visit us at [royalbit-coin.com](http://royalbit-coin.com/) or visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=3360120)
